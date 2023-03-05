@@ -62,3 +62,26 @@ When modify completed, don't forget to commit and push your changes to GitHub. W
 After the CI/CD is finished, we need to open this setting, thus we can visit our GitHub pages
 
 ![image-20230305143018114](https://raw.githubusercontent.com/fengnzl/HexoImages/master/blog/202303051430567.png)
+
+## Note
+
+When we visit our GitHub pages, may see the picture loaded fail.
+
+![image-20230305143857452](https://raw.githubusercontent.com/fengnzl/HexoImages/master/blog/202303051438492.png)
+
+However, since vite will automatically adapt the base option only when it can be imported through import, we also need to dynamically adapt the added base in the code.
+we need to modify the App.tsx and change as following code to and dynamic import.
+
+```tsx
+// prev 
+<img src="/vite.svg" className="logo" alt="Vite logo" />
+// changed
+const viteSvg = `${import.meta.env.BASE_URL}vite.svg`
+<img src={viteSvg} className="logo" alt="Vite logo" />
+```
+
+## Reference
+
+[GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action)
+
+[GitHub Pages](https://pages.github.com/)
