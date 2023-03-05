@@ -2,6 +2,8 @@
 
 This repository aims to learn how to use GitHub actions to build and deploy the product to GitHub pages.
 
+View the [published website](https://fengnzl.github.io/github-actions-pages-deploy-demo/).
+
 ## Create a project
 
 Use vite to generate a new project, enter the following command in the terminal `pnpm create vite`, and according to the hint choose the framework. For more details see the [official docs](https://vitejs.dev/guide/).
